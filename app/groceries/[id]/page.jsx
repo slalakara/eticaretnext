@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export default async function GroceriesDetail({params}) {
   const {id} = params;
@@ -17,7 +18,7 @@ export default async function GroceriesDetail({params}) {
         <div className="ProductsDetail">
           <h1 className="font-extrabold">Ürün Detayı - {id}</h1>
           <h2>{data.title}</h2>
-          <img src={data.thumbnail} alt={data.title} />
+          <Image src={data.thumbnail} alt={data.title} width={500} height={300} />
         </div>
         <div className="Comments">
           <h5>{data.description}</h5>

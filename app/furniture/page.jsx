@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Furniture() {
   const {products} = await fetch("https://dummyjson.com/products/category/furniture").then(res => res.json());
@@ -8,7 +9,7 @@ export default async function Furniture() {
       <ul>
         {products.map(x => (
           <li key={x.id}>
-            <img src={x.thumbnail} alt={x.title} />
+            <Image src={x.thumbnail} alt="Description" width={500} height={300} />
             <h5>{x.category}</h5>
             <h1>{x.title}</h1>
             <p>{x.description}</p>
