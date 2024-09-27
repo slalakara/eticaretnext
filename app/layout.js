@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="container" style={{ fontFamily: 'var(--font-geist-sans)' }}>
         <div class="Nav">
-          <h1>Productss</h1>
+          <h1>Products</h1>
           <div class="Link">
             <Link href="/">All Products</Link>
             <Link href="/beauty">Beauty</Link>
